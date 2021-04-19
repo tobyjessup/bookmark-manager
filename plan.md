@@ -24,5 +24,4 @@ I would like to see a list of bookmarks
 | Attributes | bookmark_list |
 | Methods    | display       |
 
-![Alias](./images/alias.png)
 ![Diagram](./images/diagram.png)
