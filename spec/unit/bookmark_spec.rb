@@ -6,6 +6,12 @@ describe Bookmark do
 
   describe '.all' do
     it 'returns all bookmarks' do
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+
+      connection.exec("INSERT INTO bookmarks (url) VALUES ('https://www.window-swap.com/');")
+      connection.exec("INSERT INTO bookmarks (url) VALUES('https://isitchristmas.com/');")
+      connection.exec("INSERT INTO bookmarks (url) VALUES('https://zombo.com/');")
+
       bookmarks = Bookmark.all
 
       expect(bookmarks).to include('https://www.window-swap.com/')
