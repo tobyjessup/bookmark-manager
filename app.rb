@@ -7,13 +7,18 @@ class BookmarkManager < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  get '/' do
+    'Bookmark Manager'
+    erb :"/bookmarks/index"
+  end
+
   get '/bookmarks' do
     @bookmarks = Bookmark.all
-    erb :index
+    erb :"bookmarks/bookmarks"
   end
 
   get '/bookmarks/new' do
-    erb :'bookmarks/new'
+    erb :"/bookmarks/new"
   end
 
   post '/bookmarks' do

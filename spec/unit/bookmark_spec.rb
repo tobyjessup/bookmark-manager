@@ -8,7 +8,7 @@ describe Bookmark do
     it 'returns all bookmarks' do
       connection = PG.connect(dbname: 'bookmark_manager_test')
 
-      connection.exec("INSERT INTO bookmarks (url) VALUES ('https://www.window-swap.com/');")
+      connection.exec("INSERT INTO bookmarks (url) VALUES('https://www.window-swap.com/');")
       connection.exec("INSERT INTO bookmarks (url) VALUES('https://isitchristmas.com/');")
       connection.exec("INSERT INTO bookmarks (url) VALUES('https://zombo.com/');")
 
