@@ -16,3 +16,4 @@ feature 'Updating a bookmark' do
       expect(page).to have_link('New Zombo', href: 'http://www.newzombo.com')
     end
   end
+
